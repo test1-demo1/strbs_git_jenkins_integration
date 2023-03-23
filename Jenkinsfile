@@ -5,13 +5,12 @@ pipeline {
 	stages {
 		stage('docker build') {
             steps {
-                dir('/teesstt/abcd_app/src/main/docker/base/'){
                     script{
-                        dockerImage = docker.build("imageName")
-                    }
+					echo "Building Docker Image"
+                    dockerImage = docker.build("imageName:latest -f ./teesstt/abcd_app/src/main/docker/base/")
                 }
             }
         }
+    }
 		
-	}
 }
