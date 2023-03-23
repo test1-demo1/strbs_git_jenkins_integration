@@ -3,10 +3,15 @@ pipeline {
 		dockerfile true
 	}
 	stages {
-		stage('Example') {
-			steps {
-				echo 'Hello World!'
-			}
-		}
+		stage('docker build') {
+            steps {
+                dir('/teesstt/abcd_app/src/main/docker/base/'){
+                    script{
+                        dockerImage = docker.build("imageName")
+                    }
+                }
+            }
+        }
+		
 	}
 }
