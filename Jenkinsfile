@@ -1,4 +1,9 @@
 pipeline {
+    agent {
+        node {
+            label 'Manage_Contact_Demo'
+        }
+    }
 	stages {
 		stage('docker build') {
             steps {
