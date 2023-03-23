@@ -1,2 +1,1 @@
 INDEX VERSION 1.131+D:\stream_test\teesstt\.metadata\.plugins\org.eclipse.jdt.core
-4144482266.index
